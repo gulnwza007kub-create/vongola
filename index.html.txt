@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONEWIS</title>
+    <!-- โหลดไอคอนสำหรับปุ่ม Discord -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <!-- โหลดฟอนต์สไตล์ดุดัน/แนวต้านทาน (สามารถเปลี่ยนชื่อฟอนต์ที่ชอบได้จาก Google Fonts) -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0907;
+            color: #fff;
+            overflow: hidden;
+        }
+        /* ส่วนแสดงผลหน้าเว็บเต็มจอ */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* เปลี่ยนลิงก์รูปภาพมังกรหรือภาพพื้นหลังของคุณตรงนี้ */
+            background-image: url('https://unsplash.com'); 
+            background-size: cover;
+            background-position: center;
+        }
+        /* แผ่นสีมืดๆ ทับพื้นหลังเพื่อให้ตัวหนังสือเด่นชัด */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(11,9,7,0.85) 90%);
+            z-index: 1;
+        }
+        /* กล่องเนื้อหาตรงกลาง */
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            max-width: 800px;
+        }
+        .sub-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.15); /* ข้อความจางๆ ซ้อนหลัง */
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: -15px;
+            user-select: none;
+        }
+        .main-title {
+            font-family: 'Rubik Dirt', display; /* ฟอนต์แนวกรันจ์/แตกกระแทก */
+            font-size: 4rem;
+            color: #e5d3b3;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+        /* การจัดวางปุ่ม */
+        .button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 35px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-width: 160px;
+        }
+        /* ตกแต่งปุ่ม Roster */
+        .btn-roster:hover {
+            border-color: #cca466;
+            box-shadow: 0 0 15px rgba(204, 164, 102, 0.4);
+            transform: translateY(-2px);
+        }
+        /* ตกแต่งปุ่ม Discord */
+        .btn-discord {
+            border-left: 2px solid #5865F2; /* แถบสีน้ำเงิน Discord จางๆ แบบในรูป */
+        }
+        .btn-discord:hover {
+            background: #5865F2;
+            border-color: #5865F2;
+            box-shadow: 0 0 15px rgba(88, 101, 242, 0.5);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="sub-title">ONEWISHSTYLE</div>
+            <h1 class="main-title">Welcome to ONEWIS</h1>
+            <div class="button-group">
+                <!-- ใส่ลิงก์ของคุณในช่อง href="..." -->
+                <a href="#" class="btn btn-roster">Roster</a>
+                <a href="https://discord.gg" target="_blank" class="btn btn-discord">
+                    <i class="fa-brands fa-discord"></i> Discord
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
